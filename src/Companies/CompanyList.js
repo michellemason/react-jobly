@@ -38,7 +38,6 @@ const CompanyList = () => {
                                 handle={c.handle}
                                 name={c.name}
                                 description={c.description}
-                                logoUrl={c.logoUrl}
                             />
                         ))}
                     </div>
