@@ -59,6 +59,14 @@ class JoblyApi {
     let res = await this.request("jobs", { title });
     return res.jobs;
   }
+
+    /** Get token for login from username, password. */
+
+  static async login(data) {
+    let res = await this.request(`auth/token`, data, "post");
+    return res.token;
+  }
+
   // obviously, you'll add a lot here ...
 }
 
