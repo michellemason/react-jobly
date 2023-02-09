@@ -5,11 +5,13 @@ import CompanyList from "./Companies/CompanyList";
 import CompanyDetail from "./Companies/CompanyDetail";
 import JobList from "./Jobs/JobList";
 import LoginForm from "./auth/LoginForm";
+import SignupForm from "./auth/SignupForm";
 
-function Routes({ login }) {
+function Routes({ login, signup }) {
     console.debug(
         "Routes",
         `login=${typeof login}`,
+        `register=${typeof register}`,
     );
 
     return (
@@ -22,6 +24,10 @@ function Routes({ login }) {
 
                 <Route exact path="/login">
                     <LoginForm login={login} />
+                </Route>
+
+                <Route exact path="/signup">
+                    <SignupForm signup={signup} />
                 </Route>
 
                 <Route exact path="/companies">
